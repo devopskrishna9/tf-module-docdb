@@ -6,3 +6,6 @@ data "aws_ssm_parameter" "DB_ADMIN_PASS" {
   name = "${var.env}.docdb.DB_ADMIN_PASS"
 }
 
+data "aws_kms_alias" "key" {
+  key_id = "roboshop"
+}
